@@ -41,4 +41,3 @@ jacoco测试覆盖率的使用
 maven clean package 即可有报告 在target文件中 site index.html
 
 3. 就可以查看覆盖率
-![image-20201218130655497](/Users/bytedance/Library/Application Support/typora-user-images/image-20201218130655497.png)
