@@ -38,6 +38,6 @@ jacoco测试覆盖率的使用
 
 
 2.  接下来在src/test中写相应的单测代码，将被测代码放在src/main下（路径不要放错，不然会抱找不到单测代码无法产出覆盖率的报告）
-maven clean package 即可有报告 在target文件中 site index.html
+maven clean package 然后就可以在target/site/index.html中有报告生成
 
 3. 就可以查看覆盖率
