@@ -26,7 +26,6 @@ public class SourceTest3_kafka {
         //从集合中读取数据,传入相应的topic
         DataStreamSource<String> dataStreamSource = env.addSource(new FlinkKafkaConsumer011<String>("test_attributor",new SimpleStringSchema(),properties));
 
-
         //打印输出
         dataStreamSource.print();
 
