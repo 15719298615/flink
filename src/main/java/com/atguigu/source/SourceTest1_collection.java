@@ -7,7 +7,6 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import java.util.Arrays;
 
 /**
- * @email yaoshuai.1024@bytedance.com
  * @author:yaoshuai
  * @date: 2020/12/20 9:59 上午
  */

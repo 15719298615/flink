@@ -3,7 +3,6 @@ import org.apache.flink.api.common.JobExecutionResult;
 import org.junit.Test;
 
 /**
- * @email yaoshuai.1024@bytedance.com
  * @author:yaoshuai
  * @date: 2020/12/17 9:14 下午
  */

@@ -1,7 +1,6 @@
 package com.atguigu.apitest.beans;
 
 /**
- * @email yaoshuai.1024@bytedance.com
  * @author:yaoshuai
  * @date: 2020/12/20 9:53 上午
  */

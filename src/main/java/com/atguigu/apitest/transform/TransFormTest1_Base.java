@@ -9,7 +9,6 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.util.Collector;
 
 /**
- * @email yaoshuai.1024@bytedance.com
  * @author:yaoshuai
  * @date: 2020/12/22 10:07 上午
  */

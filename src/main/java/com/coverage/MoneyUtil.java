@@ -1,7 +1,6 @@
 package com.coverage;
 import java.math.BigDecimal;
 /**
- * @email yaoshuai.1024@bytedance.com
  * @author:yaoshuai
  * @date: 2020/12/17 8:48 下午
  */

@@ -10,7 +10,6 @@ import java.util.Arrays;
 import java.util.Properties;
 
 /**
- * @email yaoshuai.1024@bytedance.com
  * @author:yaoshuai
  * @date: 2020/12/21 10:02 下午
  */
