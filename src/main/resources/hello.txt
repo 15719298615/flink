@@ -1,7 +1,7 @@
 hello world
-hello flink
+hello world
 hello spark
-hello scala
+hello spark
 how are you
 fine thank you
 and you

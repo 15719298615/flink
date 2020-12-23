@@ -40,7 +40,7 @@ public class StreamWordCount {
 
 
         //基于数据流进行转换计算,可以通过设置solt共享组slotSharingGroup("red")，当为同一个组的时候就可以共享同一个solt槽位，当不设置时默认和上一个一样。
-        //第一个不设置久违defalut共享组
+        //第一个不设置就为defalut共享组
         SingleOutputStreamOperator<Tuple2<String, Integer>> resultStream = inputDataStream.flatMap(new WordCount.MyFlatMapper())
                 .keyBy(0)
                 .sum(1);
