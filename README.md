@@ -1,5 +1,4 @@
 # flinkStudy
-flink官网：https://flink.apache.org/zh/flink-applications.html
 
 flink学习过程中的笔记   
 head - 572378dce0ee37dbef428205fe34e67337b6b603为新增的jacoco测试覆盖率代码的使用。
@@ -209,5 +208,67 @@ public class TransformTest2_RollingAggregation {
 
 }
 
+```
+
+## select与split(及connect，comap)的使用
+
+**split**
+
+DataStream->SplitStream:根据某个特征把一个datastream拆分成两个或多个datastream
+
+真正的做法：**这个拆分并不是一个真的拆分成两个流**，而是把这条流里的数据根据某一个字段打上不同的标志，然后把这个流里的所有数据根据这个打上的字段来进行区分
+
+**slect**
+
+SplitStream->DataStream:从一个SplitStream中获取一个或多个datastream。
+
+在split之后一定要调用select方法才是一个完整的分流操作，调用select方法根据那个标志来进行分流。
+
+```java
+demo
+SplitStream<SensorReading> splitStream = dataStream.split(new 
+OutputSelector<SensorReading>() {
+@Override
+public Iterable<String> select(SensorReading value) {
+return (value.getTemperature() > 30) ? Collections.singletonList("high") : 
+Collections.singletonList("low");
+}
+});
+DataStream<SensorReading> highTempStream = splitStream.select("high");
+DataStream<SensorReading> lowTempStream = splitStream.select("low");
+DataStream<SensorReading> allTempStream = splitStream.select("high", "low");
+```
+
+有了select月split的拆流操作，那么就肯定存在与之相反的连接操作
+
+##  Connect与comap，coflatmap
+
+**DataStream,DataStream** **→** **ConnectedStreams**：连接两个保持他们类型的数据流，两个数据流被 Connect 之后，只是被放在了一个同一个流中，内部依然保持各自的数据和形式不发生任何变化，两个流相互独立。
+
+**ConnectedStreams → DataStream**：作用于 ConnectedStreams 上，功能与 map和 flatMap 一样，对 ConnectedStreams 中的每一个 Stream 分别进行 map 和 flatMap处理。
+
+```java
+demo
+// 合流 connect
+DataStream<Tuple2<String, Double>> warningStream = highTempStream.map(new 
+MapFunction<SensorReading, Tuple2<String, Double>>() {
+@Override
+public Tuple2<String, Double> map(SensorReading value) throws Exception {
+return new Tuple2<>(value.getId(), value.getTemperature());
+}
+});
+ConnectedStreams<Tuple2<String, Double>, SensorReading> connectedStreams = 
+warningStream.connect(lowTempStream);
+DataStream<Object> resultStream = connectedStreams.map(new 
+CoMapFunction<Tuple2<String,Double>, SensorReading, Object>() {
+@Override
+public Object map1(Tuple2<String, Double> value) throws Exception {
+return new Tuple3<>(value.f0, value.f1, "warning");
+}
+@Override
+public Object map2(SensorReading value) throws Exception {
+return new Tuple2<>(value.getId(), "healthy");
+}
+});
 ```
 
