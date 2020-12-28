@@ -272,3 +272,13 @@ return new Tuple2<>(value.getId(), "healthy");
 });
 ```
 
+## union
+
+使用comap，coflatmap看起来非常方便，但是有一个缺陷，就是只可以合并两条流。但是有一个额外要求必须合并相同的两条流。
+
+DataStream → DataStream：对两个或者两个以上的 DataStream 进行 union 操作，产生一个包含所有 DataStream 元素的新 DataStream。
+
+```java
+DataStream<SensorReading> unionStream = highTempStream.union(lowTempStream);
+```
+
