@@ -73,7 +73,7 @@ head - 572378dce0ee37dbef428205fe34e67337b6b603为新增的jacoco测试覆盖率
    import java.util.Properties;
    
    /**
-    * @email yaoshuai.1024@bytedance.com
+    * @email yaoshuai.1024
     * @author:yaoshuai
     * @date: 2020/12/21 10:02 下午
     */
