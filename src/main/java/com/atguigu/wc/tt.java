@@ -1,5 +1,7 @@
 package com.atguigu.wc;
 
+import com.sun.tools.internal.xjc.Language;
+
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -10,12 +12,34 @@ import java.util.HashMap;
 public class tt {
 
     public static void main(String[] args) {
-        HashMap map = new HashMap(){{
 
-           put(1, Arrays.asList(1,2,3,4));
-           put(2,"2");
-           put(3,"3");
-        }};
+
+//        String s = "";
+//        System.out.println(s.isEmpty());
+//
+//
+//        HashMap map = new HashMap(){{
+//
+//           put(1, Arrays.asList(1,2,3,4));
+//           put(2,"2");
+//           put(3,"3");
+//        }};
+
+        long a = Long.valueOf("");
+        System.out.println(a);
+//        for (int i=1;i<10;i++){
+//            switch (i){
+//                case 1:
+//                    System.out.println(1);
+//                    return;
+//                case 2:
+//                    System.out.println(2);
+//                case 3:
+//                    System.out.println(3);
+//
+//            }
+//
+//        }
 
 
         /*
@@ -38,7 +62,7 @@ public class tt {
         * */
 
 
-        System.out.println(map);
+//        System.out.println(map);
 
 
     }
