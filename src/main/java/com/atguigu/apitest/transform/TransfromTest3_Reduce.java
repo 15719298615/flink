@@ -48,7 +48,7 @@ public class TransfromTest3_Reduce {
         KeyedStream<SensorReading, Tuple> keyedStream = dataStream.keyBy("id");
 
         //reduce聚合,取当前最大的温度值，以及最新的时间
-        SingleOutputStreamOperator<SensorReading> reduce = keyedStream.reduce(new ReduceFunction<SensorReading>() {
+        DataStream<SensorReading> reduce = keyedStream.reduce(new ReduceFunction<SensorReading>() {
             //sensorReading为之前所有的状态，t1则是最新来的数据
             @Override
             public SensorReading reduce(SensorReading sensorReading, SensorReading t1) throws Exception {
