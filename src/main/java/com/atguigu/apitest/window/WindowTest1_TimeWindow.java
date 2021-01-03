@@ -28,9 +28,9 @@ public class WindowTest1_TimeWindow {
         //开窗测试
         dataStreamSource.keyBy("id")
                 //滑动计数窗口
-                .countWindow(10,2);
+//                .countWindow(10,2);
                 //timeWindow有两中，一种是穿一个参就是创建滚动窗口，另一个是穿两个参数创建滑动窗口
-//                .timeWindow(Time.seconds(15));
+                .timeWindow(Time.seconds(15));
 //                .window(TumblingProcessingTimeWindows.of(Time.seconds(15)))
 
         dataStreamSource.print();
