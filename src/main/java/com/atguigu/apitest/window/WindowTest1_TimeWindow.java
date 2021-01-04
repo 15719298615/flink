@@ -2,6 +2,7 @@ package com.atguigu.apitest.window;
 
 import com.atguigu.apitest.beans.SensorReading;
 import org.apache.flink.api.common.functions.AggregateFunction;
+import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.windowing.assigners.TumblingAlignedProcessingTimeWindows;
@@ -18,7 +19,9 @@ public class WindowTest1_TimeWindow {
 
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        env.setParallelism(1);
+        env.setParallelism(1)
+            .setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
+        ;
         DataStreamSource<SensorReading> dataStreamSource = env.fromCollection(
                 Arrays.asList(
                         new SensorReading("s1", "123L", 12.3),
