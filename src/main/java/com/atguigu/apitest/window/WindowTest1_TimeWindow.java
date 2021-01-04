@@ -1,6 +1,7 @@
 package com.atguigu.apitest.window;
 
 import com.atguigu.apitest.beans.SensorReading;
+import org.apache.flink.api.common.functions.AggregateFunction;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.windowing.assigners.TumblingAlignedProcessingTimeWindows;
@@ -27,7 +28,7 @@ public class WindowTest1_TimeWindow {
 
         //开窗测试
         dataStreamSource.keyBy("id")
-                //滑动计数窗口
+                //滑动计数窗口，第二个参数为滑动步长
 //                .countWindow(10,2);
                 //timeWindow有两中，一种是穿一个参就是创建滚动窗口，另一个是穿两个参数创建滑动窗口
                 .timeWindow(Time.seconds(15));
@@ -35,7 +36,6 @@ public class WindowTest1_TimeWindow {
 
         dataStreamSource.print();
         env.execute();
-
 
     }
 
