@@ -1,9 +1,17 @@
 package com.atguigu.wc;
 
 import com.sun.tools.internal.xjc.Language;
+import org.apache.commons.collections.Predicate;
 
+import java.awt.*;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.concurrent.Callable;
+import java.util.function.Consumer;
+import java.util.function.DoubleToIntFunction;
+import java.util.function.IntBinaryOperator;
 
 /**
  * @author:yaoshuai
@@ -25,8 +33,11 @@ public class tt {
 //           put(3,"3");
 //        }};
 
-        long a = Long.valueOf("");
-        System.out.println(a);
+//        long a = Long.valueOf("");
+//        int addition = () -> 5;
+//
+//        int x = int a -> return a+1
+//        System.out.println();
 //        for (int i=1;i<10;i++){
 //            switch (i){
 //                case 1:
@@ -64,6 +75,38 @@ public class tt {
 
 //        System.out.println(map);
 
+        ArrayList<Integer> list = new ArrayList<>();
 
+        int i = 5;
+        Collections.addAll(list, 1,2,3,4);
+
+        //lambda表达式 方法引用
+//        list.forEach(System.out::println);
+//
+//        list.forEach(element -> {
+//            if (element % 2 == 0) {
+//                System.out.println(element);
+//            }
+//        });
+
+        DoubleToIntFunction doubleToIntFunction = a -> {
+            return (int) (a+1);
+        };
+
+        Consumer tConsumer = e -> System.out.println(e);
+//        tConsumer.accept(1);
+        Predicate k = a -> a == 1;
+
+        System.out.println(doubleToIntFunction.applyAsInt(2));
+//        Runnable runnable = () -> a();
+
+//        runnable.run();
+
+        list.stream().filter(k);
     }
+
+    public static void a(){
+        System.out.println("1");
+    }
+
 }
