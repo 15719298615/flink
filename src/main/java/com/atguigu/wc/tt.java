@@ -1,7 +1,6 @@
 package com.atguigu.wc;
 
 import com.sun.tools.internal.xjc.Language;
-import org.apache.commons.collections.Predicate;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -12,6 +11,7 @@ import java.util.concurrent.Callable;
 import java.util.function.Consumer;
 import java.util.function.DoubleToIntFunction;
 import java.util.function.IntBinaryOperator;
+import java.util.function.Predicate;
 
 /**
  * @author:yaoshuai
@@ -95,14 +95,14 @@ public class tt {
 
         Consumer tConsumer = e -> System.out.println(e);
 //        tConsumer.accept(1);
-        Predicate k = a -> a == 1;
+        Predicate<Integer> k = a -> a == 1;
 
         System.out.println(doubleToIntFunction.applyAsInt(2));
 //        Runnable runnable = () -> a();
 
 //        runnable.run();
 
-        list.stream().filter(k);
+        list.stream().filter(k).forEach(a->a());
     }
 
     public static void a(){
