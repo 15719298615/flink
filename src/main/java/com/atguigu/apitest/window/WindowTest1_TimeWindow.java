@@ -12,6 +12,7 @@ import org.apache.flink.streaming.api.windowing.assigners.TumblingProcessingTime
 import org.apache.flink.streaming.api.windowing.time.Time;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author:yaoshuai.1024
