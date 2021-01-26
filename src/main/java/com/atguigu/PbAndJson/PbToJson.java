@@ -1,6 +1,8 @@
 package com.atguigu.PbAndJson;
 
 import com.atguigu.PbAndJson.*;
+import com.google.protobuf.InvalidProtocolBufferException;
+
 /**
  * @author:yaoshuai.1024
  * @date: 2021/1/26 1:32 下午
@@ -20,6 +22,17 @@ public class PbToJson {
                 .addSoftware("player");
         String messageBody = builder.build().toString();
         System.out.println(messageBody);
+
+        byte[] bytes = builder.build().toByteArray();
+        System.out.println(bytes);
+        try {
+            Mobile.MobilePhone mobilePhone = Mobile.MobilePhone.parseFrom(bytes);
+            System.out.println("由byte转换成结构");
+            System.out.println(mobilePhone);
+        } catch (InvalidProtocolBufferException e) {
+            e.printStackTrace();
+        }
+
 
     }
 
