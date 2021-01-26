@@ -23,7 +23,7 @@ public class reflection_test1 {
             Arrays.stream(publicMethods).forEach(e->rpcMethodMap.put(e.getName(),aclass));
         }
         System.out.println(rpcMethodMap);
-        ClassUtil.invoke(rpcMethodMap.get("emmitt1").getName(),"emmitt1",true);
+        ClassUtil.invoke(rpcMethodMap.get("emmitt2").getName(),"emmitt2",true);
 
 
         String eeee = SecureUtil.md5("eeee");

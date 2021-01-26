@@ -83,6 +83,21 @@
             <artifactId>hutool-all</artifactId>
             <version>5.4.0</version>
         </dependency>
+        <dependency>
+             <groupId>com.googlecode.protobuf-java-format</groupId>
+             <artifactId>protobuf-java-format</artifactId>
+             <version>1.2</version>
+         </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-netty</artifactId>
+            <version>1.10.0</version>
+        </dependency>
     </dependencies>
 
 </project>

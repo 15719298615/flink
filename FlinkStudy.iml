@@ -91,7 +91,6 @@
     <orderEntry type="library" name="Maven: com.data-artisans:flakka-actor_2.11:2.3-custom" level="project" />
     <orderEntry type="library" name="Maven: com.data-artisans:flakka-remote_2.11:2.3-custom" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty:3.8.0.Final" level="project" />
-    <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:2.5.0" level="project" />
     <orderEntry type="library" name="Maven: org.uncommons.maths:uncommons-maths:1.2.2a" level="project" />
     <orderEntry type="library" name="Maven: com.data-artisans:flakka-slf4j_2.11:2.3-custom" level="project" />
     <orderEntry type="library" name="Maven: org.clapper:grizzled-slf4j_2.11:1.0.2" level="project" />
@@ -156,5 +155,25 @@
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.9.1" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.44" level="project" />
     <orderEntry type="library" name="Maven: cn.hutool:hutool-all:5.4.0" level="project" />
+    <orderEntry type="library" name="Maven: com.googlecode.protobuf-java-format:protobuf-java-format:1.2" level="project" />
+    <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.8.0" level="project" />
+    <orderEntry type="library" name="Maven: io.grpc:grpc-netty:1.10.0" level="project" />
+    <orderEntry type="library" name="Maven: io.grpc:grpc-core:1.10.0" level="project" />
+    <orderEntry type="library" name="Maven: io.grpc:grpc-context:1.10.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.7" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:19.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.errorprone:error_prone_annotations:2.1.2" level="project" />
+    <orderEntry type="library" name="Maven: io.opencensus:opencensus-api:0.11.0" level="project" />
+    <orderEntry type="library" name="Maven: io.opencensus:opencensus-contrib-grpc-metrics:0.11.0" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-http2:4.1.17.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-http:4.1.17.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.17.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-handler:4.1.17.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.17.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.17.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-handler-proxy:4.1.17.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.17.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.17.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-socks:4.1.17.Final" level="project" />
   </component>
 </module>
