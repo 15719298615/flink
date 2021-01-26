@@ -1,3 +1,6 @@
+![GitHub stars](https://img.shields.io/badge/%E7%82%B9%E4%B8%AA-star-green)
+
+
 # flinkStudy
 
 flink学习过程中的笔记   
