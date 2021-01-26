@@ -11,6 +11,7 @@ public class PbToJson {
 
     public static void main(String[] args) {
         // protobuf 转 json
+//        参考这个网址：https://my.oschina.net/u/1162561/blog/364772非常感谢
         Mobile.MobilePhone.Builder builder = Mobile.MobilePhone.newBuilder();
         Mobile.Hardware.Builder hardware = Mobile.Hardware.newBuilder();
         hardware.setRam(2).setRom(16).setSize(5);
